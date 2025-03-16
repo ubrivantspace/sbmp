@@ -1,0 +1,110 @@
+body{
+  /*max-width: 250px;
+  width: 100%;*/
+}
+
+.context{
+    margin: 22px;
+    padding: 20px;
+    border: solid black 2px;
+    border-radius: 5%;
+    
+}
+.context:hover{
+    background-color: aqua;
+}
+#info_2{
+    font-size: 40px;
+    text-align: center;
+    font-family: Montserrat;
+}
+.semester-numbers-description-link{
+  text-decoration: none;
+  font-family: Montserrat;
+  font-weight: 600;
+  color: black;
+}
+.semester-numbers-description{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 180px;
+  margin-right: 180px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid black 2px;
+  max-width: 120px;
+  width: 100%;
+
+}
+.semester-numbers-description:hover{
+  background-color:rgba(255, 0, 0, 0.512);
+}
+.link-reference{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+.blinking-cursor {
+    font-weight: 330;
+    font-size: 40px;
+    color: black;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+@keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-webkit-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-ms-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-o-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
