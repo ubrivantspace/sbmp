@@ -57,7 +57,37 @@ body{
   font-weight: bold;
 }
 
+/*Button_Design*/
+ .course-content {
+  font-family: 'Minecraft', sans-serif;
+  background-color: #C29B6B;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid #8B5A2B;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  position: relative;
+  transition: all 0.1s ease;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
 
+.course-content:hover {
+  background-color: #9F7E4A;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.course-content:active {
+  background-color: #8C6D41;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
 
 
 
