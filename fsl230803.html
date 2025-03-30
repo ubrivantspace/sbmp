@@ -26,14 +26,19 @@
         </a>
         <span class="path-directional-arrow"> > </span>
     </div>
-    <button class="course-content">
-    <a class="link-reference" href="fsl230803-notes.html">Notes</a>
-    </button>
-    <button class="course-content">
-    <a class="link-reference" href="fsl230803-experiment.html">Experiments</a>
-    </button>
-    <button class="course-content">
-    <a class="link-reference" href="fsl230803-qb.html">Question Bank</a>
-    </button>
+    <script>
+        function fsl230803NotesContent(){
+            window.open("fsl230803-notes.html","_self");
+        }
+        function fsl230803ExperimentsContent(){
+            window.open("fsl230803-experiment.html","_self");
+        }
+        function fsl230803QuestionBankContent(){
+            window.open("fsl230803-qb.html","_self");
+        }
+    </script>
+    <button class="course-content" onclick="fsl230803NotesContent()">Notes</button>
+    <button class="course-content" onclick="fsl230803ExperimentsContent()">Experiments</button>
+    <button class="course-content" onclick="fsl230803QuestionBankContent()">Question Bank</button>
 </body>
 </html>

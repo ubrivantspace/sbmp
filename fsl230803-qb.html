@@ -30,11 +30,15 @@
             </a>
             <span class="path-directional-arrow">  >  </span>
     </div>
-    <button class="course-content">
-        <a target="_blank" class="link-reference" href="FSL-Question bank 2025-PT1.pdf">PT-1 Question Bank</a>
-    </button>
-    <button class="course-content">
-        <a target="_blank" class="link-reference" href="FSL-Question bank 2025-PT2.pdf">PT-2 Question Bank</a>
-    </button>
+    <script>
+        function fslQuestionBank2025Pt1Content(){
+            window.open("FSL-Question bank 2025-PT1.pdf");
+        }
+        function fslQuestionBank2025Pt2Content(){
+            window.open("FSL-Question bank 2025-PT2.pdf");
+        }
+    </script>
+    <button class="course-content" onclick="fslQuestionBank2025Pt1Content()">PT-1 Question Bank</button>
+    <button class="course-content" onclick="fslQuestionBank2025Pt2Content()">PT-2 Question Bank</button>
 </body>
 </html>

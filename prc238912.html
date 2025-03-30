@@ -26,12 +26,15 @@
         </a>
         <span class="path-directional-arrow"> > </span>
     </div>
-
-    <button class="course-content">
-        <a class="link-reference" href="prc238912-notes.html">Notes</a>
-    </button>
-    <button class="course-content">
-        <a class="link-reference" href="prc238912-qb.html">Question Bank</a>
-    </button>
+    <script>
+        function prc238912NotesContent(){
+            window.open("prc238912-notes.html","_self");
+        }
+        function prc238912QuestionBankContent(){
+            window.open("prc238912-qb.html","_self");
+        }
+    </script>
+    <button class="course-content" onclick="prc238912NotesContent()">Notes</button>
+    <button class="course-content" onclick="prc238912QuestionBankContent()">Question Bank</button>
 </body>
 </html>
