@@ -10,14 +10,15 @@
         </style>
 </head>
 <body>
-    <div>
+    <div id="sem-2-main">
         <a href="index.html" class="path-definer-link">
         <span class="path-definer">Homepage</span>
         </a>
         <span class="path-directional-arrow"> > </span>
         <a href="semester_2.html" class="path-definer-link">
         <span class="path-definer">Semester - 2</span>
-        </a>
+        </a><br>
+        <span class="inside-top-bar-definition">Select the course.</span>
     </div>
     <script>
         function prc238912Course(){
@@ -30,9 +31,21 @@
             window.open("bex238911.html","_self");
         }
     </script>
-    <span class="inside-top-bar-definition">Select the course.</span><br><br>
-    <button class="course-name" onclick="prc238912Course()">PRC238912</button>
-    <button class="course-name" onclick="fsl230803Course()">FSL230803</button>
-    <button class="course-name" onclick="bex238911Course()">BEX238911</button>
+    
+    <span class="course-block" id="prc238912">
+    <button class="course-name" onclick="prc238912Course()">
+        <span class="course-name-button">PRC238912</span>
+    </button>
+    </span>
+    <span class="course-block" id="fsl230803">
+    <button class="course-name" onclick="fsl230803Course()">
+        <span class="course-name-button">FSL230803</span>
+    </button>
+    </span>
+        <span class="course-block" id="bex238911">
+    <button class="course-name" onclick="bex238911Course()">
+        <span class="course-name-button">BEX238911</span>
+    </button>
+    </span>
 </body>
 </html>

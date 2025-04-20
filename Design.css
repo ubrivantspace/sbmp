@@ -1,6 +1,8 @@
 body{
   /*max-width: 250px;
   width: 100%;*/
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #DDEB9D;
 }
 
 .context{
@@ -24,21 +26,7 @@ body{
   font-weight: 600;
   color: black;
 }
-.semester-numbers-description{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 180px;
-  margin-right: 180px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: solid black 2px;
-  max-width: 120px;
-  width: 100%;
 
-}
-.semester-numbers-description:hover{
-  background-color:rgba(255, 0, 0, 0.512);
-}
 .link-reference{
   text-decoration: none;
   color: black;
@@ -46,22 +34,153 @@ body{
 .path-definer-link{
   text-decoration: none;
   color: black;
-  font-size: 20px;
+  font-size: 30px;
+  margin: 8px;
+  font-weight: 700;
 }
 .path-definer-link:hover{
   text-decoration: underline solid black 1.5px;
 
 }
 .path-directional-arrow{
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
 }
 
+.course-content{
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  margin: 8px;
+}
 
+.course-content:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
 
+.course-content:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
 
+.semester-numbers-description{
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 180px;
+  margin-right: 180px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
+.semester-numbers-description:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
 
+.semester-numbers-description:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+.course-block{
+  border: black 40px;
+  padding: 100px;
+  margin: 10px;
+}
+
+.course-name {
+  background: #ddff00;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+.course-name-button {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+.course-name::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.course-name:hover {
+  color: #fff;
+}
+
+.course-name:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+#sem-2-main{
+  margin-bottom: 120px;
+  padding-bottom: 30px;
+  background-color: #fbca1f;
+  border: black 4px solid;
+  border-radius: 10px;
+}
+
+.path-link-area{
+  margin-bottom: 30px;
+  padding-bottom: 50px;
+  background-color: #fbca1f;
+  border: black 4px solid;
+  border-radius: 10px;
+}
+
+#prc238912{
+  background-image: url("c-programming.png");
+  border: 5px solid black;
+  border-radius: 10px;
+}
+#fsl230803{
+  background-image: url("javascript.png");
+  border: 5px solid black;
+  border-radius: 10px;
+}
+#bex238911{
+  background-image: url("basicelectronics.png");
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.inside-top-bar-definition{
+  margin: 8px;
+  font-size: 20px;
+}
 
 
 .blinking-cursor {
@@ -119,3 +238,69 @@ body{
     }
   }
   
+  .experiment-numbers{
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .chapter-numbers{
+    font-size: 25px;
+    font-weight: 700;
+    padding-left: 7px;
+  }
+  .question-bank-numbers{
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .chapter-heading-numeral{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px;
+  }
+  table{
+    border: black 5px solid;
+    background-color: #FFFECE;
+  }
+  td{
+    border: black 5px solid
+  }
+
+#index-large-description{
+  font-size: 250px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgba(255, 0, 0, 0.555);
+  font-weight: 600;
+}
+
+#info_1{
+  font-size: 100px;
+  font-weight: 500;
+}
+/*.ending-credits-text{
+  position: relative;
+  bottom: 260px;
+  left:20px;
+  font-size: 50px;
+  font-weight: 600;
+  background-image: url("mumbai.png");
+}*/
+.ending-credits-text{
+  background-size: ;
+}
+.ending-credits-text{
+  color: rgba(255, 255, 255, 0.704);
+  font-size: 70px;
+  font-weight: 600;
+}
+#ending-footer-image{
+  background: linear-gradient(to right, #000000c9, rgba(0, 0, 0, 0)), url(mumbai.png);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+marquee{
+  background-color: rgb(223, 76, 76);
+  font-size: 20px;
+  font-weight: 600;
+}
