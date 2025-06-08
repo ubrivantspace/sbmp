@@ -98,6 +98,24 @@ body{
   box-shadow: 0.05em 0.05em;
 }
 
+.div-links{
+  position: relative;
+  left: 9px;
+  top: 4px;
+  color: black;
+  text-decoration: none;
+}
+
+.div-links:hover{
+  text-decoration: underline solid black 1.5px;
+}
+
+.bullet-points-type-2{
+  font-size:20px;
+  position: relative;
+  left: 8px;
+  top: 3px;
+}
 .course-block{
   border: black 40px;
   padding: 100px;
@@ -145,7 +163,7 @@ body{
   opacity: 1;
 }
 
-#sem-2-main{
+#sem-main{
   margin-bottom: 120px;
   padding-bottom: 30px;
   background-color: #fbca1f;
