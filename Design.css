@@ -194,6 +194,13 @@ body{
   border: 5px solid black;
   border-radius: 10px;
 }
+#dbs238915{
+  background-image: url("databasesys.jpg");
+  background-position-x: center;
+  background-position-y: center;
+  border: 5px solid black;
+  border-radius: 10px;
+}
 
 .inside-top-bar-definition{
   margin: 8px;
