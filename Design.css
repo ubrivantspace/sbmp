@@ -180,22 +180,22 @@ body{
 }
 
 #prc238912{
-  background-image: url("c-programming.png");
+  background-image: url("Extra_Content/c-programming.png");
   border: 5px solid black;
   border-radius: 10px;
 }
 #fsl230803{
-  background-image: url("javascript.png");
+  background-image: url("Extra_Content/javascript.png");
   border: 5px solid black;
   border-radius: 10px;
 }
 #bex238911{
-  background-image: url("basicelectronics.png");
+  background-image: url("Extra_Content/basicelectronics.png");
   border: 5px solid black;
   border-radius: 10px;
 }
 #dbs238915{
-  background-image: url("databasesys.jpg");
+  background-image: url("Extra_Content/databasesys.jpg");
   background-position-x: center;
   background-position-y: center;
   border: 5px solid black;
@@ -318,7 +318,7 @@ body{
   font-weight: 600;
 }
 #ending-footer-image{
-  background: linear-gradient(to right, #000000c9, rgba(0, 0, 0, 0)), url(mumbai.png);
+  background: linear-gradient(to right, #000000c9, rgba(0, 0, 0, 0)), url("Extra_Content/mumbai.png");
   background-size: 110%;
   background-repeat: no-repeat;
   height: 500px;
