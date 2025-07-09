@@ -1,331 +1,309 @@
-body{
-  /*max-width: 250px;
-  width: 100%;*/
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #DDEB9D;
-}
 
-.context{
-    margin: 22px;
-    padding: 20px;
-    border: solid black 2px;
-    border-radius: 5%;
-    
-}
-.context:hover{
-    background-color: aqua;
-}
-#info_2{
-    font-size: 40px;
-    text-align: center;
-    font-family: Montserrat;
-}
-.semester-numbers-description-link{
-  text-decoration: none;
-  font-family: Montserrat;
-  font-weight: 600;
-  color: black;
-}
+        :root {
+            --bg-image-url: url('https://sbmp.ac.in/Common/Uploads/MenuTemplate/2_Menu_SBMP.jpg');
+            --font-family: 'Inter', sans-serif;
+            --text-color: #f0f0f0;
+            --glass-bg: rgba(30, 30, 30, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --blur-amount: 20px;
+            --button-bg: rgba(255, 255, 255, 0.1);
+            --button-hover-bg: rgba(255, 255, 255, 0.2);
+            --shadow-color: rgba(0, 0, 0, 0.2);
+            --sidebar-width: 250px;
+        }
 
-.link-reference{
-  text-decoration: none;
-  color: black;
-}
-.path-definer-link{
-  text-decoration: none;
-  color: black;
-  font-size: 30px;
-  margin: 8px;
-  font-weight: 700;
-}
-.path-definer-link:hover{
-  text-decoration: underline solid black 1.5px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
-.path-directional-arrow{
-  font-size: 30px;
-  font-weight: bold;
-}
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            background-color: #000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
 
-.course-content{
-  background: #fbca1f;
-  font-family: inherit;
-  padding: 0.6em 1.3em;
-  font-weight: 900;
-  font-size: 18px;
-  border: 3px solid black;
-  border-radius: 0.4em;
-  box-shadow: 0.1em 0.1em;
-  cursor: pointer;
-  margin: 8px;
-}
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: var(--bg-image-url);
+            background-size: cover;
+            background-position: center;
+        }
+        .background-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.07) 0,
+                rgba(255, 255, 255, 0.07) 1px,
+                transparent 1px,
+                transparent 5px
+            );
+            backdrop-filter: blur(5px) saturate(120%);
+        }
 
-.course-content:hover {
-  transform: translate(-0.05em, -0.05em);
-  box-shadow: 0.15em 0.15em;
-}
+        .app-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-height: 100vh;
+            transition: margin-left 0.3s ease;
+        }
 
-.course-content:active {
-  transform: translate(0.05em, 0.05em);
-  box-shadow: 0.05em 0.05em;
-}
+        .app-wrapper.sidebar-open {
+            margin-left: var(--sidebar-width);
+        }
 
-.semester-numbers-description{
-  background: #fbca1f;
-  font-family: inherit;
-  padding: 0.6em 1.3em;
-  font-weight: 900;
-  font-size: 18px;
-  border: 3px solid black;
-  border-radius: 0.4em;
-  box-shadow: 0.1em 0.1em;
-  cursor: pointer;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 180px;
-  margin-right: 180px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount));
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 10px 20px;
+        }
 
-.semester-numbers-description:hover {
-  transform: translate(-0.05em, -0.05em);
-  box-shadow: 0.15em 0.15em;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(79, 70, 70);
+        }
 
-.semester-numbers-description:active {
-  transform: translate(0.05em, 0.05em);
-  box-shadow: 0.05em 0.05em;
-}
+        .header-btn, .search-bar {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount));
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            box-shadow: 0 4px 20px var(--shadow-color);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .header-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.div-links{
-  position: relative;
-  left: 9px;
-  top: 4px;
-  color: black;
-  text-decoration: none;
-}
+        .header-btn:hover {
+            background: var(--button-hover-bg);
+            transform: translateY(-2px);
+        }
+        
+        .menu-btn {
+            padding: 12px;
+            width: 48px;
+            height: 48px;
+            position: relative;
+        }
 
-.div-links:hover{
-  text-decoration: underline solid black 1.5px;
-}
+        .search-bar {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
 
-.bullet-points-type-2{
-  font-size:20px;
-  position: relative;
-  left: 8px;
-  top: 3px;
-}
-.course-block{
-  border: black 40px;
-  padding: 100px;
-  margin: 10px;
-}
+        .search-bar svg {
+            fill: #999;
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+        }
 
-.course-name {
-  background: #ddff00;
-  border: none;
-  padding: 10px 20px;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 600;
-  width: 120px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transform: skew(-21deg);
-}
+        .search-bar input {
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--text-color);
+            font-size: 16px;
+            font-family: var(--font-family);
+            padding: 12px 0;
+        }
 
-.course-name-button {
-  display: inline-block;
-  transform: skew(21deg);
-}
+        .search-bar input::placeholder {
+            color: #999;
+            opacity: 1;
+        }
 
-.course-name::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 100%;
-  left: 0;
-  background: rgb(20, 20, 20);
-  opacity: 0;
-  z-index: -1;
-  transition: all 0.5s;
-}
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: calc(-1 * var(--sidebar-width));
+            width: var(--sidebar-width);
+            height: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount));
+            border-right: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--shadow-color);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            z-index: 20;
+        }
 
-.course-name:hover {
-  color: #fff;
-}
+        .sidebar.active {
+            transform: translateX(var(--sidebar-width));
+        }
 
-.course-name:hover::before {
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
+        .sidebar-item {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
 
-#sem-main{
-  margin-bottom: 120px;
-  padding-bottom: 30px;
-  background-color: #fbca1f;
-  border: black 4px solid;
-  border-radius: 10px;
-}
+        .sidebar-item:hover {
+            background: var(--button-hover-bg);
+            border-radius: 12px;
+        }
 
-.path-link-area{
-  margin-bottom: 30px;
-  padding-bottom: 50px;
-  background-color: #fbca1f;
-  border: black 4px solid;
-  border-radius: 10px;
-}
+        .content-card {
+            flex-grow: 1;
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount));
+            -webkit-backdrop-filter: blur(var(--blur-amount));
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            box-shadow: 0 8px 32px 0 rgb(0 0 0 / 64%);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
 
-#prc238912{
-  background-image: url("Extra_Content/c-programming.png");
-  border: 5px solid black;
-  border-radius: 10px;
-}
-#fsl230803{
-  background-image: url("Extra_Content/javascript.png");
-  border: 5px solid black;
-  border-radius: 10px;
-}
-#bex238911{
-  background-image: url("Extra_Content/basicelectronics.png");
-  border: 5px solid black;
-  border-radius: 10px;
-}
-#dbs238915{
-  background-image: url("Extra_Content/databasesys.jpg");
-  background-position-x: center;
-  background-position-y: center;
-  border: 5px solid black;
-  border-radius: 10px;
-}
+        .content-card h1 {
+            font-size: 32px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
 
-.inside-top-bar-definition{
-  margin: 8px;
-  font-size: 20px;
-}
+        .semester-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
 
+        .semester-btn {
+            
+            border-radius: 16px;
+            padding: 20px;
+            font-size: 25px;
+            font-weight: 500;
+            color: var(--text-color);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(2px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.509);
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
+              inset 0 4px 20px rgba(255, 255, 255, 0.3);
+        }
 
-.blinking-cursor {
-    font-weight: 330;
-    font-size: 40px;
-    color: black;
-    -webkit-animation: 1s blink step-end infinite;
-    -moz-animation: 1s blink step-end infinite;
-    -ms-animation: 1s blink step-end infinite;
-    -o-animation: 1s blink step-end infinite;
-    animation: 1s blink step-end infinite;
-}
-@keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: black;
-    }
-  }
-  
-  @-moz-keyframes blink {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: black;
-    }
-  }
-  
-  @-webkit-keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: black;
-    }
-  }
-  
-  @-ms-keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: black;
-    }
-  }
-  
-  @-o-keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: black;
-    }
-  }
-  
-  .experiment-numbers{
-    font-size: 25px;
-    font-weight: 500;
-  }
+        .semester-btn:hover {
+            background: var(--button-hover-bg);
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px var(--shadow-color);
+        }
 
-  .chapter-numbers{
-    font-size: 25px;
-    font-weight: 700;
-    padding-left: 7px;
-  }
-  .question-bank-numbers{
-    font-size: 25px;
-    font-weight: 700;
-  }
-  .chapter-heading-numeral{
-    font-size: 20px;
-    font-weight: 600;
-    padding: 8px;
-  }
-  table{
-    border: black 5px solid;
-    background-color: #FFFECE;
-  }
-  td{
-    border: black 5px solid
-  }
+        .footer {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount));
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px var(--shadow-color);
+        }
 
-#index-large-description{
-  font-size: 250px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgba(255, 0, 0, 0.555);
-  font-weight: 600;
-}
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
-#info_1{
-  font-size: 100px;
-  font-weight: 500;
-}
-/*.ending-credits-text{
-  position: relative;
-  bottom: 260px;
-  left:20px;
-  font-size: 50px;
-  font-weight: 600;
-  background-image: url("mumbai.png");
-}*/
-.ending-credits-text{
-  background-size: ;
-}
-.ending-credits-text{
-  color: rgba(255, 255, 255, 0.704);
-  font-size: 70px;
-  font-weight: 600;
-}
-#ending-footer-image{
-  background: linear-gradient(to right, #000000c9, rgba(0, 0, 0, 0)), url("Extra_Content/mumbai.png");
-  background-size: 110%;
-  background-repeat: no-repeat;
-  height: 500px;
-}
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
 
-marquee{
-  background-color: rgb(223, 76, 76);
-  font-size: 20px;
-  font-weight: 600;
-}
+        .footer-text {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        @media (max-width: 768px) {
+            .app-wrapper {
+                height: auto;
+            }
+            .app-wrapper.sidebar-open {
+                margin-left: 0;
+            }
+            .content-card h1 {
+                font-size: 28px;
+            }
+            .semester-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .search-bar {
+                order: 3;
+                width: 100%;
+            }
+            .sidebar {
+                width: 100%;
+                left: -100%;
+            }
+            .sidebar.active {
+                transform: translateX(100%);
+            }
+            .footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .footer-links a {
+                margin: 0 10px;
+            }
+        }
