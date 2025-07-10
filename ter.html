@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester II - Subjects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-image-url: url('https://i.imgur.com/u5y3t8b.jpeg');
+            --font-family: 'Inter', sans-serif;
+            --text-color: #f0f0f0;
+            --glass-bg: rgba(30, 30, 30, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --blur-amount: 20px;
+            --button-bg: rgba(255, 255, 255, 0.1);
+            --button-hover-bg: rgba(255, 255, 255, 0.2);
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            background-color: #000;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: var(--bg-image-url);
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) saturate(120%);
+        }
+       
+        .app-wrapper {
+            width: 100%;
+            max-width: 950px;
+            height: auto;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding: 0 10px;
+        }
+
+        .header-btn, .search-bar, .menu-btn {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount));
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            box-shadow: 0 4px 20px var(--shadow-color);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .header-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--glass-border);
+            background-color: rgba(0,0,0,0.2);
+        }
+
+        .header-btn:hover {
+            background: var(--button-hover-bg);
+            transform: translateY(-2px);
+        }
+        
+        .menu-btn {
+            padding: 12px;
+            width: 48px;
+            height: 48px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background-color: rgba(255,255,255,0.15);
+        }
+
+        .search-bar svg {
+            fill: #ddd;
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--text-color);
+            font-size: 16px;
+            font-family: var(--font-family);
+            padding: 12px 0;
+        }
+
+        .search-bar input::placeholder {
+            color: #ddd;
+            opacity: 1;
+        }
+        
+        .content-area {
+            padding: 25px 40px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 30px;
+            box-shadow: 0 8px 32px 0 var(--shadow-color);
+        }
+
+        .content-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .curriculum-link {
+            display: block;
+            margin-bottom: 30px;
+            color: #a0cff1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .curriculum-link:hover {
+            text-decoration: underline;
+        }
+        
+        .subject-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .subject-btn {
+            background: rgba(80, 80, 80, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .subject-btn:hover {
+            background: rgba(90, 90, 90, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px var(--shadow-color);
+        }
+        
+        .subject-btn:last-child {
+            justify-self: center;
+            width: 100%;
+            max-width: 250px; /* Matches the minmax(250px, 1fr) of the grid */
+        }
+
+        .subject-code {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            opacity: 0.9;
+        }
+
+        .subject-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount));
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            display: none;
+            flex-direction: column;
+            min-width: 150px;
+            z-index: 10;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
+        }
+
+        .dropdown-item {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--button-hover-bg);
+            border-radius: 12px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                align-items: flex-start;
+                height: auto;
+                min-height: 100vh;
+            }
+            .app-wrapper {
+                height: auto;
+            }
+            .header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .search-bar {
+                order: 3;
+                width: 100%;
+            }
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+            .dropdown-menu {
+                right: 20px;
+            }
+            .subject-btn:last-child {
+                max-width: 100%; /* Full width on mobile for consistency */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container"></div>
+    <div class="app-wrapper">
+        <header class="header">
+            <button class="header-btn" aria-label="Home button">Home</button>
+            <div class="search-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                <input type="text" id="searchInput" placeholder="Search for content" aria-label="Search subjects">
+            </div>
+            <button class="header-btn menu-btn" onclick="toggleDropdown()" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#" class="dropdown-item">Profile</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                <a href="#" class="dropdown-item">Logout</a>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div class="content-header">
+                <h1>Semester - II</h1>
+                <a href="#" class="curriculum-link">Click here For Curriculum Sem - II</a>
+            </div>
+           
+            <div class="subject-grid">
+                <button class="subject-btn" aria-label="Applied Mathematics">
+                    <div class="subject-code">AMT238908</div>
+                    <div class="subject-name">Applied Mathematics</div>
+                </button>
+                <button class="subject-btn" aria-label="Basic Electronics">
+                    <div class="subject-code">BEX238911</div>
+                    <div class="subject-name">Basic Electronics</div>
+                </button>
+                <button class="subject-btn" aria-label="Programming In C">
+                    <div class="subject-code">PRC238912</div>
+                    <div class="subject-name">Programming In C</div>
+                </button>
+                <button class="subject-btn" aria-label="Workshop & Practices">
+                    <div class="subject-code">CWP230801</div>
+                    <div class="subject-name">Workshop & Practices</div>
+                </button>
+                <button class="subject-btn" aria-label="Fundamentals Of Scripting Language">
+                    <div class="subject-code">FSL230803</div>
+                    <div class="subject-name">Fundamentals Of Scripting Language</div>
+                </button>
+                <button class="subject-btn" aria-label="Fundamentals Of Computer Network">
+                    <div class="subject-code">FCN230802</div>
+                    <div class="subject-name">Fundamentals Of Computer Network</div>
+                </button>
+                <button class="subject-btn" aria-label="Environmental Studies">
+                    <div class="subject-code">EVS238909</div>
+                    <div class="subject-name">Environmental Studies</div>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('dropdownMenu');
+            const menuBtn = document.querySelector('.menu-btn');
+            if (!menuBtn.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('#searchInput');
+        const subjectButtons = document.querySelectorAll('.subject-btn');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            subjectButtons.forEach(button => {
+                const subjectName = button.querySelector('.subject-name').textContent.toLowerCase();
+                const subjectCode = button.querySelector('.subject-code').textContent.toLowerCase();
+                if (subjectName.includes(searchTerm) || subjectCode.includes(searchTerm)) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

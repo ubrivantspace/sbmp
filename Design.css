@@ -1,6 +1,7 @@
 
         :root {
             --bg-image-url: url('https://sbmp.ac.in/Common/Uploads/MenuTemplate/2_Menu_SBMP.jpg');
+            --bg-image-sem-2-url: url('https://sbmp.ac.in/Common/Uploads/HomeTemplate/11_HPHeader_Conferance%20Room.jpg');
             --font-family: 'Inter', sans-serif;
             --text-color: #f0f0f0;
             --glass-bg: rgba(30, 30, 30, 0.25);
@@ -39,6 +40,36 @@
             background-size: cover;
             background-position: center;
         }
+
+        .background-container-sem-2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: var(--bg-image-sem-2-url);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .background-container-sem-2::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.07) 0,
+                rgba(255, 255, 255, 0.07) 1px,
+                transparent 1px,
+                transparent 5px
+            );
+            backdrop-filter: blur(5px) saturate(120%);
+        }
+
         .background-container::after {
             content: '';
             position: absolute;
@@ -79,7 +110,7 @@
             background: var(--glass-bg);
             backdrop-filter: blur(var(--blur-amount));
             border: 1px solid var(--glass-border);
-            border-radius: 50px;
+            border-radius: 15px;
             padding: 10px 20px;
         }
 
@@ -94,8 +125,8 @@
             background: var(--glass-bg);
             backdrop-filter: blur(var(--blur-amount));
             border: 1px solid var(--glass-border);
-            border-radius: 50px;
-            box-shadow: 0 4px 20px var(--shadow-color);
+            border-radius: 8px;
+            box-shadow: 1px 4px 20px var(--shadow-color);
             transition: background 0.3s ease, transform 0.2s ease;
         }
         
@@ -231,13 +262,84 @@
             border: 1px solid rgba(255, 255, 255, 0.509);
             border-radius: 2rem;
             box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
-              inset 0 4px 20px rgba(255, 255, 255, 0.3);
+            inset 0 4px 20px rgba(255, 255, 255, 0.3);
         }
 
         .semester-btn:hover {
             background: var(--button-hover-bg);
             transform: scale(1.05);
             box-shadow: 0 4px 20px var(--shadow-color);
+        }
+
+        .content-area {
+            padding: 25px 40px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 30px;
+            box-shadow: 0 8px 32px 0 var(--shadow-color);
+        }
+
+        .content-header h1 {
+            font-size: 28px;
+            font-weight:Uber: 700;
+            margin-bottom: 5px;
+        }
+        
+        .curriculum-link {
+            display: block;
+            margin-bottom: 30px;
+            color: #a0cff1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .curriculum-link:hover {
+            text-decoration: underline;
+        }
+        
+        .subject-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .subject-btn {
+            background: rgba(80, 80, 80, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .subject-btn:hover {
+            background: rgba(90, 90, 90, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px var(--shadow-color);
+        }
+        
+        /*.subject-btn:last-child {
+            grid-column: 1 / -1;
+            justify-self: auto;
+            max-width: 300px;
+        }*/
+
+        .subject-code {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            opacity: 0.9;
+        }
+
+        .subject-name {
+            font-size: 20px;
+            font-weight: 500;
         }
 
         .footer {
@@ -294,6 +396,12 @@
             .sidebar {
                 width: 100%;
                 left: -100%;
+            }
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+            .subject-btn:last-child {
+                max-width: 100%; /* Full width on mobile for consistency */
             }
             .sidebar.active {
                 transform: translateX(100%);
