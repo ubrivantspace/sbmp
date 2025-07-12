@@ -77,11 +77,11 @@
                     <div class="subject-code">AMT238908</div>
                     <div class="subject-name">Applied Mathematics</div>
                 </button>
-                <button class="subject-btn" aria-label="Basic Electronics">
+                <button onclick="bex238911Content()" class="subject-btn" aria-label="Basic Electronics">
                     <div class="subject-code">BEX238911</div>
                     <div class="subject-name">Basic Electronics</div>
                 </button>
-                <button class="subject-btn" aria-label="Programming In C">
+                <button onclick="prc238912Content()" class="subject-btn" aria-label="Programming In C">
                     <div class="subject-code">PRC238912</div>
                     <div class="subject-name">Programming In C</div>
                 </button>
@@ -89,7 +89,7 @@
                     <div class="subject-code">CWP230801</div>
                     <div class="subject-name">Workshop & Practices</div>
                 </button>
-                <button class="subject-btn" aria-label="Fundamentals Of Scripting Language">
+                <button onclick="fsl230803Content()" class="subject-btn" aria-label="Fundamentals Of Scripting Language">
                     <div class="subject-code">FSL230803</div>
                     <div class="subject-name">Fundamentals Of Scripting Language</div>
                 </button>
@@ -130,6 +130,18 @@
 
         function openHomePage() {
             window.location.href = 'index.html';
+        }
+    </script>
+
+    <script>
+        function prc238912Content() {
+            window.location.href = 'SEM-2/PRC/Code/prc238912.html';
+        }
+        function fsl230803Content() {
+            window.location.href = 'SEM-2/FSL/Code/fsl230803.html';
+        }
+        function bex238911Content() {
+            window.location.href = 'SEM-2/BEX/Code/bex238911.html';
         }
     </script>
 </body>
