@@ -1,44 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DBS Notes</title>
-    <link rel="stylesheet" href="../../../Design.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
-</head>
-<body>
-    <div class="path-link-area">
-        <a href="../../../Design.css" class="path-definer-link">
-        <span class="path-definer">Homepage</span>
-        </a>
-        <span class="path-directional-arrow"> > </span>
-
-        <a href="../../../semester_3.html" class="path-definer-link">
-        <span class="path-definer">Semester - 3</span>
-        </a>
-        <span class="path-directional-arrow"> > </span>
-
-        <a href="../Code/dbs238915.html" class="path-definer-link">
-            <span class="path-definer">DBS238915</span>
-            </a>
-            <span class="path-directional-arrow">  >  </span>
-        <a href="../Code/dbs238915-notes.html" class="path-definer-link">
-            <span class="path-definer">Notes</span>
-            </a>
-            <span class="path-directional-arrow">  >  </span>
-    </div>
-    <script>
-        function dbsBookContent() {
-            window.open("../Notes/Ramakrishnan - Database Management Systems 3rd Edition.pdf", "_self");
-        }
-    </script>
-    <button class="course-content" onclick="dbsBookContent()">Database Management System 3rd Edition</button>
-</body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
     <script type="text/javascript">
@@ -110,37 +69,50 @@
         </header>
         <main class="content-area">
             <div class="content-header">
-                <h1>DBS238915 Notes</h1>
-                <h3 class="course-name">Notes for Database Management System</h3>
+                <h1>DBS238915 Notes Chapter - 4</h1>
+                <h3 class="course-name">Notes for DBMS Chapter - 4</h3>
             </div>
             <div class="subject-grid">
-                <button onclick="dbsBookContent()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Book</div>
-                    <div class="subject-name">Database Management System 3rd Edition</div>
+                <button onclick="dbsCh4A()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(a)</div>
+                    <div class="subject-name">Boyce-Codd Normal Form(BCNF)</div>
                 </button>
-                <button onclick="dbsCh1()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 1</div>
-                    <div class="subject-name">Introduction to DBMS</div>
+                <button onclick="dbsCh4B()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(b)</div>
+                    <div class="subject-name">Database Normalization part - 1</div>
                 </button>
-                <button onclick="dbsCh2()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 2</div>
-                    <div class="subject-name">Overview of SQL</div>
+                <button onclick="dbsCh4C()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(c)</div>
+                    <div class="subject-name">Database Normalization Examples</div>
                 </button>
-                <button onclick="dbsCh3()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 3</div>
-                    <div class="subject-name">NoSQL Databases</div>
+                <button onclick="dbsCh4D()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(d)</div>
+                    <div class="subject-name">ER-Diagram</div>
                 </button>
-                <button onclick="dbsCh4()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 4</div>
-                    <div class="subject-name">Relational Database Design</div>
+                
+                <button onclick="dbsCh4E()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(e)</div>
+                    <div class="subject-name">Functional Dependency in DBMS part - 1</div>
                 </button>
-                <button onclick="dbsCh5()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 5</div>
-                    <div class="subject-name">Query Processor and Optimizer, Transactions</div>
+                <button onclick="dbsCh4F()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(f)</div>
+                    <div class="subject-name">Functional Dependency in DBMS part - 2</div>
                 </button>
-                <button onclick="dbsCh6()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 6</div>
-                    <div class="subject-name">Concurrency Control and Recovery System</div>
+                <button onclick="dbsCh4G()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(g)</div>
+                    <div class="subject-name">Normalization</div>
+                </button>
+                <button onclick="dbsCh4H()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(h)</div>
+                    <div class="subject-name">Map Cardinalities</div>
+                </button>
+                <button onclick="dbsCh4I()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(i)</div>
+                    <div class="subject-name">Multivalues Dependency</div>
+                </button>
+                <button onclick="dbsCh4J()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 4(j)</div>
+                    <div class="subject-name">Database Normalization part - 2</div>
                 </button>
             </div>
         </main>
@@ -175,26 +147,35 @@
     </script>
 
     <script>
-        function dbsBookContent() {
-            window.open("../Notes/Ramakrishnan - Database Management Systems 3rd Edition.pdf");
+        function dbsCh4A() {
+            window.open("../Notes/Ch-4/BoyceCoddNormalForm.pdf");
         }
-        function dbsCh1() {
-            location.href = "dbs238915-notes-ch1.html";
+        function dbsCh4B() {
+            window.open("../Notes/Ch-4/Database Normalization.pdf");
         }
-        function dbsCh2() {
-            location.href = "dbs238915-notes-ch2.html";
+        function dbsCh4C() {
+            window.open("../Notes/Ch-4/database-normalisation-example.pdf");
         }
-        function dbsCh3() {
-            location.href = "dbs238915-notes-ch3.html";
+        function dbsCh4D() {
+            window.open("../Notes/Ch-4/ERDiagram_gee.pdf");
         }
-        function dbsCh4() {
-            location.href = "dbs238915-notes-ch4.html";
+        function dbsCh4E() {
+            window.open("../Notes/Ch-4/Functional Dependency in DBMS.pdf");
         }
-        function dbsCh5() {
-            location.href = "dbs238915-notes-ch5.html";
+        function dbsCh4F() {
+            window.open("../Notes/Ch-4/functional dependency.pdf");
         }
-        function dbsCh6() {
-            location.href = "dbs238915-notes-ch6.html";
+        function dbsCh4G() {
+            window.open("../Notes/Ch-4/Normalization.pdf");
+        }
+        function dbsCh4H() {
+            window.open("../Notes/Ch-4/unit4_mtrl1.pdf");
+        }
+        function dbsCh4I() {
+            window.open("../Notes/Ch-4/unit4_mtrl2.pdf");
+        }
+        function dbsCh4J() {
+            window.open("../Notes/Ch-4/unit4_Normalization.pdf");
         }
     </script>
 

@@ -1,44 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DBS Notes</title>
-    <link rel="stylesheet" href="../../../Design.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
-</head>
-<body>
-    <div class="path-link-area">
-        <a href="../../../Design.css" class="path-definer-link">
-        <span class="path-definer">Homepage</span>
-        </a>
-        <span class="path-directional-arrow"> > </span>
-
-        <a href="../../../semester_3.html" class="path-definer-link">
-        <span class="path-definer">Semester - 3</span>
-        </a>
-        <span class="path-directional-arrow"> > </span>
-
-        <a href="../Code/dbs238915.html" class="path-definer-link">
-            <span class="path-definer">DBS238915</span>
-            </a>
-            <span class="path-directional-arrow">  >  </span>
-        <a href="../Code/dbs238915-notes.html" class="path-definer-link">
-            <span class="path-definer">Notes</span>
-            </a>
-            <span class="path-directional-arrow">  >  </span>
-    </div>
-    <script>
-        function dbsBookContent() {
-            window.open("../Notes/Ramakrishnan - Database Management Systems 3rd Edition.pdf", "_self");
-        }
-    </script>
-    <button class="course-content" onclick="dbsBookContent()">Database Management System 3rd Edition</button>
-</body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
     <script type="text/javascript">
@@ -110,37 +69,29 @@
         </header>
         <main class="content-area">
             <div class="content-header">
-                <h1>DBS238915 Notes</h1>
-                <h3 class="course-name">Notes for Database Management System</h3>
+                <h1>DST238914 Notes</h1>
+                <h3 class="course-name">Notes for DST Chapter - 1</h3>
             </div>
             <div class="subject-grid">
-                <button onclick="dbsBookContent()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Book</div>
-                    <div class="subject-name">Database Management System 3rd Edition</div>
+                <button onclick="dstCh1A()" class="subject-btn" aria-label="DST238914 Notes">
+                    <div class="subject-code">Ch - 1(a)</div>
+                    <div class="subject-name">Introduction to Data Structure</div>
                 </button>
-                <button onclick="dbsCh1()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 1</div>
-                    <div class="subject-name">Introduction to DBMS</div>
+                <button onclick="dstCh1B()" class="subject-btn" aria-label="DST238914 Notes">
+                    <div class="subject-code">Ch - 1(b)</div>
+                    <div class="subject-name">Algorithm</div>
                 </button>
-                <button onclick="dbsCh2()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 2</div>
-                    <div class="subject-name">Overview of SQL</div>
+                <button onclick="dstCh1C()" class="subject-btn" aria-label="DST238914 Notes">
+                    <div class="subject-code">Ch - 1(c)</div>
+                    <div class="subject-name">Algorithm Complexity</div>
                 </button>
-                <button onclick="dbsCh3()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 3</div>
-                    <div class="subject-name">NoSQL Databases</div>
+                <button onclick="dstCh1D()" class="subject-btn" aria-label="DST238914 Notes">
+                    <div class="subject-code">Ch - 1(d)</div>
+                    <div class="subject-name">Time and Space Complexity</div>
                 </button>
-                <button onclick="dbsCh4()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 4</div>
-                    <div class="subject-name">Relational Database Design</div>
-                </button>
-                <button onclick="dbsCh5()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 5</div>
-                    <div class="subject-name">Query Processor and Optimizer, Transactions</div>
-                </button>
-                <button onclick="dbsCh6()" class="subject-btn" aria-label="DBS238915 Notes">
-                    <div class="subject-code">Chapter - 6</div>
-                    <div class="subject-name">Concurrency Control and Recovery System</div>
+                <button onclick="dstCh1E()" class="subject-btn" aria-label="DST238914 Notes">
+                    <div class="subject-code">Ch - 1(e)</div>
+                    <div class="subject-name">Array</div>
                 </button>
             </div>
         </main>
@@ -175,27 +126,22 @@
     </script>
 
     <script>
-        function dbsBookContent() {
-            window.open("../Notes/Ramakrishnan - Database Management Systems 3rd Edition.pdf");
+        function dstCh1A() {
+            window.open("../Notes/Ch-1/unit1_Introduction-to-Datastructure.pdf");
         }
-        function dbsCh1() {
-            location.href = "dbs238915-notes-ch1.html";
+        function dstCh1B() {
+            window.open("../Notes/Ch-1/unit1_Algorithm.pdf");
         }
-        function dbsCh2() {
-            location.href = "dbs238915-notes-ch2.html";
+        function dstCh1C() {
+            window.open("../Notes/Ch-1/unit1_Algorithm Complexity.pdf");
         }
-        function dbsCh3() {
-            location.href = "dbs238915-notes-ch3.html";
+        function dstCh1D() {
+            window.open("../Notes/Ch-1/unit1_Time Space Complexity.pdf");
         }
-        function dbsCh4() {
-            location.href = "dbs238915-notes-ch4.html";
+        function dstCh1E() {
+            window.open("../Notes/Ch-1/unit1_Array.pdf");
         }
-        function dbsCh5() {
-            location.href = "dbs238915-notes-ch5.html";
-        }
-        function dbsCh6() {
-            location.href = "dbs238915-notes-ch6.html";
-        }
+        
     </script>
 
 </body>
