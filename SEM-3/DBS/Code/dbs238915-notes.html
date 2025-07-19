@@ -122,6 +122,14 @@
                     <div class="subject-code">Ch - 1</div>
                     <div class="subject-name">Introduction to DBMS</div>
                 </button>
+                <button onclick="dbsCh2()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 2</div>
+                    <div class="subject-name">Overview of SQL</div>
+                </button>
+                <button onclick="dbsCh3()" class="subject-btn" aria-label="DBS238915 Notes">
+                    <div class="subject-code">Ch - 3</div>
+                    <div class="subject-name">NoSQL Databases</div>
+                </button>
             </div>
         </main>
         <footer class="footer">
@@ -159,9 +167,14 @@
             window.open("../Notes/Ramakrishnan - Database Management Systems 3rd Edition.pdf");
         }
         function dbsCh1() {
-            window.open("../Notes/DBMS-Ch1.pdf");
+            location.href = "dbs238915-notes-ch1.html";
         }
-
+        function dbsCh2() {
+            location.href = "dbs238915-notes-ch2.html";
+        }
+        function dbsCh3() {
+            location.href = "dbs238915-notes-ch3.html";
+        }
     </script>
 
 </body>
