@@ -53,8 +53,8 @@
     <div class="background-container-sem-2"></div>
     <div class="sidebar" id="sidebar">
         <!--<a href="index.html" class="sidebar-item">Home</a>-->
-        <a href="#" class="sidebar-item">About Us</a>
-        <a href="#" class="sidebar-item">News</a>
+        <a href="../../../aboutus.html" class="sidebar-item">About Us</a>
+        <a href="../../../news.html" class="sidebar-item">News</a>
     </div>
     <div class="app-wrapper">
         <header class="header">
@@ -81,11 +81,15 @@
                     <div class="subject-code">Ch - 2</div>
                     <div class="subject-name">Classes, Object and Methods in Java</div>
                 </button>
+                <button onclick="javaChapter3()" class="subject-btn" aria-label="PRJ238912 Notes">
+                    <div class="subject-code">Ch - 3</div>
+                    <div class="subject-name">Inheritance, Interfaces and Packages</div>
+                </button>
             </div>
         </main>
         <footer class="footer">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
+                <a href="../../../privacypolicy.html">Privacy Policy</a>
             </div>
             <div class="footer-text">© 2025 Portal. All rights reserved.</div>
         </footer>
@@ -109,7 +113,7 @@
         });
 
         function openHomePage() {
-            window.location.href = 'index.html';
+            window.location.href = '../../../index.html';
         }
     </script>
 
@@ -119,6 +123,9 @@
         }
         function javaChapter2() {
             window.open("../Notes/PRJ-Ch2.pdf");
+        }
+        function javaChapter3() {
+            window.open("../Notes/PRJ-Ch3.pdf");
         }
 
     </script>
