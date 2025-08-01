@@ -1,6 +1,6 @@
 
         :root {
-            --bg-image-url: url('https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JhZGllbnQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+            --bg-image-url: url('https://images.unsplash.com/photo-1665652475985-37e285aeff53?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGdyYWRpZW50fGVufDB8fDB8fHww');
             --bg-image-sem-2-url: url('https://sbmp.ac.in/Common/Uploads/HomeTemplate/11_HPHeader_Conferance%20Room.jpg');
             --font-family: 'Inter', sans-serif;
             --text-color: #f0f0f0;
@@ -11,7 +11,6 @@
             --button-hover-bg: rgba(255, 255, 255, 0.2);
             --shadow-color: rgba(0, 0, 0, 0.2);
             --sidebar-width: 250px;
-        }
 
         * {
             margin: 0;
@@ -28,6 +27,19 @@
             justify-content: center;
             align-items: flex-start;
         }
+
+
+        /*.bitcount-prop-single {
+            font-family: "Bitcount Prop Single", system-ui;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0,
+                "CRSV" 0.5,
+                "ELSH" 0,
+                "ELXP" 0;
+        }*/
 
         .background-container {
             position: fixed;
@@ -62,12 +74,12 @@
             height: 100%;
             background-image: repeating-linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.07) 0,
+                rgba(255, 255, 255, 0) 0,
                 rgba(255, 255, 255, 0.07) 1px,
-                transparent 1px,
-                transparent 5px
+                transparent 20px,
+                transparent 30px
             );
-            backdrop-filter: blur(5px) saturate(120%);
+            backdrop-filter: blur(2px) saturate(140%);
         }
 
         .background-container::after {
@@ -79,12 +91,12 @@
             height: 100%;
             background-image: repeating-linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.07) 0,
+                rgba(255, 255, 255, 0) 0,
                 rgba(255, 255, 255, 0.07) 1px,
-                transparent 1px,
-                transparent 5px
+                transparent 20px,
+                transparent 20px
             );
-            backdrop-filter: blur(5px) saturate(120%);
+            backdrop-filter: blur(2px) saturate(140%);
         }
 
         .app-wrapper {
@@ -115,10 +127,11 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: rgb(79, 70, 70);
+            font-size: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: 'Bitcount Prop Single', 'Times New Roman', Times, serif;
+            color: rgb(230, 227, 227);
         }
 
         .header-btn, .search-bar {
@@ -257,12 +270,12 @@
             text-align: center;
             transition: all 0.3s ease;
             background: rgba(255, 255, 255, 0);
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.075);
             backdrop-filter: blur(2px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.509);
+            border: 1px solid rgba(255, 255, 255, 0.158);
             border-radius: 2rem;
             box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
-            inset 0 4px 20px rgba(255, 255, 255, 0.3);
+            inset 0 4px 20px rgba(255, 255, 255, 0.124);
         }
 
         .semester-btn:hover {
