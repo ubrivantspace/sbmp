@@ -44,46 +44,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Your College Content</title>
-    <link rel="stylesheet" href="Design.css">
+    <link rel="stylesheet" href="../Design.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:slnt,wght@-3,250&display=swap');
-</style>
     </head>
     <body>
     <div class="background-container"></div>
     <div class="sidebar" id="sidebar">
         <!--<a href="index.html" class="sidebar-item">Home</a>-->
-        <a href="#" class="sidebar-item">About Us</a>
-        <a href="#" class="sidebar-item">News</a>
+        <a href="../../../aboutus.html" class="sidebar-item">About Us</a>
+        <a href="../../../news.html" class="sidebar-item">News</a>
     </div>
     <div class="app-wrapper">
         <header class="header">
-            <div class="logo">Portal</div>
+            <button onclick="openHomePage()" class="header-btn" aria-label="Home button">Home</button>
             <div class="search-bar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
                 <input type="text" placeholder="Search for content">
             </div>
             <button class="header-btn menu-btn" onclick="toggleSidebar()">
-                <svg xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"><path d="m21 17.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero" fill="#edeaea"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
             </button>
         </header>
-        <main class="content-card">
-            <h1>Get Your College Content</h1>
-            <div class="semester-grid">
-                <button id="semester-1-btn" class="semester-btn">Semester - I</button>
-                <button id="semester-2-btn" class="semester-btn">Semester - II</button>
-                <button id="semester-3-btn" class="semester-btn">Semester - III</button>
-                <button id="semester-4-btn" class="semester-btn">Semester - IV</button>
-                <button id="semester-5-btn" class="semester-btn">Semester - V</button>
-                <button class="semester-btn">Semester - VI</button>
+        <main class="content-area">
+            <div class="content-header">
+                <h1>Semester - IV</h1>
+                <a href="#" class="curriculum-link">Click here For Curriculum Sem - IV</a>
+            </div>
+            <div class="subject-grid">
+                <button onclick="osy238916Content()" class="subject-btn" aria-label="Operating System">
+                    <div class="subject-code">OSY238916</div>
+                    <div class="subject-name">Operating System</div>
+                </button>
+                <button onclick="iot238917Content()" class="subject-btn" aria-label="Iot and Application">
+                    <div class="subject-code">IOT238917</div>
+                    <div class="subject-name">Iot and Application</div>
+                </button>
+                <button onclick="nwa238918Content()" class="subject-btn" aria-label="Network Administration">
+                    <div class="subject-code">NWA238918</div>
+                    <div class="subject-name">Network Administration</div>
+                </button>
+                <button onclick="adb230809Content()" class="subject-btn" aria-label="Advance DBMS">
+                    <div class="subject-code">ADB230809</div>
+                    <div class="subject-name">Advance DBMS</div>
+                </button>
+                <button onclick="csy230808Content()" class="subject-btn" aria-label="Cyber Security">
+                    <div class="subject-code">CSY230808</div>
+                    <div class="subject-name">Cyber Security</div>
+                </button>
+                <button onclick="prp230807Content()" class="subject-btn" aria-label="Programming In Python">
+                    <div class="subject-code">PRP230807</div>
+                    <div class="subject-name">Programming In Python</div>
+                </button>
+                <button onclick="psp230810Content()" class="subject-btn" aria-label="Project Survey and Practices">
+                    <div class="subject-code">PSP230810</div>
+                    <div class="subject-name">Project Survey and Practices</div>
+                </button>
             </div>
         </main>
         <footer class="footer">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
+                <a href="../../../privacypolicy.html">Privacy Policy</a>
             </div>
             <div class="footer-text">© 2025 Portal. All rights reserved.</div>
         </footer>
@@ -105,68 +127,19 @@
                 document.querySelector('.app-wrapper').classList.remove('sidebar-open');
             }
         });
+
+        function openHomePage() {
+            window.location.href = '../index-temp.html';
+        }
     </script>
-    <!-- PapaParse for CSV reading -->
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
     <script>
-    let searchData = [];
-
-    // Load CSV data
-    fetch('data.csv')
-        .then(response => response.text())
-        .then(csvText => {
-            Papa.parse(csvText, {
-                header: true,
-                skipEmptyLines: true,
-                complete: function(results) {
-                    searchData = results.data;
-                }
-            });
-        });
-
-    const searchInput = document.querySelector('.search-bar input');
-
-    searchInput.addEventListener('input', function(e) {
-        const query = e.target.value.toLowerCase().trim();
-        if (!query) {
-            removeResults();
-            return;
+        function iot238917Content() {
+            window.location.href = 'SEM-4/IOT/Code/iot238917.html';
         }
-        const matches = searchData.filter(item =>
-            item.keyword && item.keyword.toLowerCase().includes(query)
-        );
-        showResults(matches);
-    });
-
-    function showResults(matches) {
-        removeResults();
-        if (matches.length === 0) return;
-
-        const resultsBox = document.createElement('div');
-        resultsBox.id = 'search-results';
-
-        matches.forEach(match => {
-            const linkEl = document.createElement('a');
-            linkEl.href = match.link;
-            linkEl.textContent = match.keyword;
-            resultsBox.appendChild(linkEl);
-        });
-        document.body.appendChild(resultsBox);
-    }
-
-    function removeResults() {
-        const existing = document.getElementById('search-results');
-        if (existing) existing.remove();
-    }
-
-    // Close results when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!document.querySelector('.search-bar').contains(e.target)) {
-            removeResults();
+        function prp230807Content() {
+            window.location.href = 'SEM-4/PRP/Code/prp230807.html';
         }
-    });
     </script>
-
 </body>
 </html>

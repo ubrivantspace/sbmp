@@ -171,6 +171,7 @@
             display: flex;
             align-items: center;
             padding: 0 20px;
+            position: relative;
         }
 
         .search-bar svg {
@@ -390,7 +391,39 @@
             font-size: 14px;
             color: #999;
         }
-        
+    /* Search results dropdown - matches portal theme */
+    #search-results {
+    position: fixed; /* instead of absolute */
+    top: 70px; /* adjust to match search bar height and page layout */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 300px); /* match your search bar width, adjust as needed */
+    max-width: 600px; /* optional for better look */
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur-amount));
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    font-family: var(--font-family);
+    z-index: 99999; /* make sure it's above everything */
+    }
+
+
+
+    #search-results a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 14px;
+        transition: background 0.3s ease;
+    }
+
+    #search-results a:hover {
+        background: var(--button-hover-bg);
+    }
+
         @media (max-width: 768px) {
             .app-wrapper {
                 height: auto;
